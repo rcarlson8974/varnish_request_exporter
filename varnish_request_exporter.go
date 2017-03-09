@@ -112,6 +112,8 @@ func main() {
 				log.Error(err)
 				continue
 			}
+			
+			// Rando and Neptune making go go
 			for _, metric := range metrics {
 				var collector prometheus.Collector
 				collector = prometheus.NewHistogramVec(prometheus.HistogramOpts{
