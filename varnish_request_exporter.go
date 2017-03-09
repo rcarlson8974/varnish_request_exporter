@@ -114,7 +114,7 @@ func main() {
 			}
 			for _, metric := range metrics {
 				var collector prometheus.Collector
-				collector, err = prometheus.RegisterOrGet(prometheus.NewHistogramVec(prometheus.HistogramOpts{
+				collector, err = prometheus.Register(prometheus.NewHistogramVec(prometheus.HistogramOpts{
 					Namespace: namespace,
 					Name:      metric.Name,
 					Help:      fmt.Sprintf("Varnish request log value for %s", metric.Name),
